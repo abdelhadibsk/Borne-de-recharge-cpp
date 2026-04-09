@@ -7,14 +7,25 @@
 #include <memoire_borne.h>
 #include "memoire_partagee.hpp"
 
+/**
+ * @file memoire_partagee.hpp
+ * @brief Acces centralise a la memoire partagee de la borne.
+ */
+
 /* Variable globale unique pour accès à la mémoire partagée */
 extern entrees *io_shared;
 extern int shmid_shared;
 
+/**
+ * @class MemoirePartagee
+ * @brief Initialise et expose l'acces a la memoire partagee materielle.
+ */
 class MemoirePartagee {
 public:
 
-    /* Fonction pour initialiser l'accès à la mémoire partagée */
+    /**
+     * @brief Attache le processus a la memoire partagee si necessaire.
+     */
     void init_memoire_partagee(void);
 };
 

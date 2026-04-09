@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project C++:  Fichier source de src/generateur_save.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project C++
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('generateur__save_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">generateur_save.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="generateur__save_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GENERATEUR_SAVE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GENERATEUR_SAVE_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;donnees_borne.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memoire_borne.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="voyants_8hpp.html">voyants.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="prise_8hpp.html">prise.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * Module de gestion du chargeur de véhicule électrique</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * Implémente une machine d&#39;états pour la séquence de charge complète.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * Changements C → C++ :</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *  - La variable globale etat_present et les fonctions libres deviennent</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *    membres privés/publics d&#39;une classe.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  - L&#39;enum non scopé devient un enum class (évite les collisions de noms).</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  - Le constructeur remplace generateur_save_init().</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  - Les méthodes const garantissent qu&#39;elles ne modifient pas l&#39;état.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_gestionnaire_charge.html">   31</a></span><span class="keyword">class </span><a class="code hl_function" href="class_gestionnaire_charge.html#acd6f2a06509100c0852b1c138fbbbf47">GestionnaireCharge</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_gestionnaire_charge.html#acd6f2a06509100c0852b1c138fbbbf47">GestionnaireCharge</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_gestionnaire_charge.html#ad8e799a141ce92c554aebe8c4d2845a5">charger</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_gestionnaire_charge.html#a95da04e7cee7bd129a96cd04925c117a">genererPwm</a>(pwm mode);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_gestionnaire_charge.html#a6d3eeb1a5cd931eb5b47a0cb4e54b5a9">tension</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_gestionnaire_charge.html#a40ef444e1e4f9a8e2fa2cdd0765be1b9">ouvrirAC</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_gestionnaire_charge.html#a827912c2b0dadf5a6b7937fac9d71392">fermerAC</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_gestionnaire_charge.html#a98a34908a7bedd09cf4a00d0005e79b3">deconnecter</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">/* Enum class scopé : EtatCharge::A, EtatCharge::B, etc.</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">     * En C on écrivait &quot;etatA&quot;, ce qui polluait le namespace global. */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">enum class</span> EtatCharge { A, B, C, D, E };</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    EtatCharge etatPresent;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    EtatCharge etatSuivant;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> init();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">/* GESTIONNAIRE_CHARGE_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_a40ef444e1e4f9a8e2fa2cdd0765be1b9"><div class="ttname"><a href="class_gestionnaire_charge.html#a40ef444e1e4f9a8e2fa2cdd0765be1b9">GestionnaireCharge::ouvrirAC</a></div><div class="ttdeci">void ouvrirAC()</div><div class="ttdoc">Ouvre le contacteur AC pour couper l&#39;alimentation.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:175</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_a6d3eeb1a5cd931eb5b47a0cb4e54b5a9"><div class="ttname"><a href="class_gestionnaire_charge.html#a6d3eeb1a5cd931eb5b47a0cb4e54b5a9">GestionnaireCharge::tension</a></div><div class="ttdeci">int tension() const</div><div class="ttdoc">Retourne la tension actuellement lue sur la borne.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:74</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_a827912c2b0dadf5a6b7937fac9d71392"><div class="ttname"><a href="class_gestionnaire_charge.html#a827912c2b0dadf5a6b7937fac9d71392">GestionnaireCharge::fermerAC</a></div><div class="ttdeci">void fermerAC()</div><div class="ttdoc">Ferme le contacteur AC pour alimenter la prise.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:183</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_a95da04e7cee7bd129a96cd04925c117a"><div class="ttname"><a href="class_gestionnaire_charge.html#a95da04e7cee7bd129a96cd04925c117a">GestionnaireCharge::genererPwm</a></div><div class="ttdeci">void genererPwm(pwm mode)</div><div class="ttdoc">Modifie le signal PWM envoye au vehicule.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:60</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_a98a34908a7bedd09cf4a00d0005e79b3"><div class="ttname"><a href="class_gestionnaire_charge.html#a98a34908a7bedd09cf4a00d0005e79b3">GestionnaireCharge::deconnecter</a></div><div class="ttdeci">void deconnecter()</div><div class="ttdoc">Reinitialise la borne apres la deconnexion du vehicule.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:191</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_acd6f2a06509100c0852b1c138fbbbf47"><div class="ttname"><a href="class_gestionnaire_charge.html#acd6f2a06509100c0852b1c138fbbbf47">GestionnaireCharge::GestionnaireCharge</a></div><div class="ttdeci">GestionnaireCharge()</div><div class="ttdoc">Construit le gestionnaire et initialise la machine d&#39;etats.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:32</div></div>
+<div class="ttc" id="aclass_gestionnaire_charge_html_ad8e799a141ce92c554aebe8c4d2845a5"><div class="ttname"><a href="class_gestionnaire_charge.html#ad8e799a141ce92c554aebe8c4d2845a5">GestionnaireCharge::charger</a></div><div class="ttdeci">void charger()</div><div class="ttdoc">Lance la sequence de charge complete.</div><div class="ttdef"><b>Definition</b> generateur_save.cpp:87</div></div>
+<div class="ttc" id="aprise_8hpp_html"><div class="ttname"><a href="prise_8hpp.html">prise.hpp</a></div><div class="ttdoc">Gestion des voyants et du verrou de la prise.</div></div>
+<div class="ttc" id="avoyants_8hpp_html"><div class="ttname"><a href="voyants_8hpp.html">voyants.hpp</a></div><div class="ttdoc">Interface de pilotage des voyants de la borne.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="generateur__save_8hpp.html">generateur_save.hpp</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

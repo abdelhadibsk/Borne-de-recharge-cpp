@@ -1,0 +1,37 @@
+\doxysection{client\+\_\+db.\+hpp}
+\hypertarget{client__db_8hpp_source}{}\label{client__db_8hpp_source}\index{src/client\_db.hpp@{src/client\_db.hpp}}
+\doxymbox{\hyperlink{client__db_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_DB\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLIENT\_DB\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_client_d_b_accb9fdcf2239b672366826333a337f59}{ClientDB}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_client_d_b_accb9fdcf2239b672366826333a337f59}{ClientDB}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_client_d_b_a6ae13a021f98828dae411d994d7bf3f1}{authentification\_carte}}(\textcolor{keywordtype}{int}\ numero,\ \textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{int}\ passage);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_client_d_b_a1f932a76472cd75f9133c0131716ea0f}{load\_cards\_from\_file}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_client_d_b_abdcb49419fd497deaa28b5a67136d3fa}{count\_cards\_in\_file}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_client_d_b_afff982dc4635cdbe67e5937e7d2170a1}{reset\_carte\_active}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX\_CARDS\ =\ 100;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ allowed\_cards[MAX\_CARDS];}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ allowed\_count;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ carte\_active;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ carte\_autorisee(\textcolor{keywordtype}{int}\ numero);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CLIENT\_DB\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

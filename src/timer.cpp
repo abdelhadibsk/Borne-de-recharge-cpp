@@ -4,17 +4,24 @@
 
 #include <chrono>
 
-//constructeur de la classe Timer, initialise le timer
+/**
+ * @file timer.cpp
+ * @brief Implementation d'un chronometre simple.
+ */
+
+/** @copydoc Timer::Timer */
 Timer::Timer()
 {
     ref = std::chrono::steady_clock::now();
 }
 
+/** @copydoc Timer::timer_raz */
 void Timer::timer_raz()
 {
     ref = std::chrono::steady_clock::now();
 }
 
+/** @copydoc Timer::timer_valeur */
 uint32_t Timer::timer_valeur()
 {
     auto now = std::chrono::steady_clock::now();

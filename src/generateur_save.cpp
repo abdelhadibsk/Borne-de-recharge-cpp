@@ -12,6 +12,11 @@
 #include "client_db.hpp"
 #include "fin_charge.hpp"
 
+/**
+ * @file generateur_save.cpp
+ * @brief Implementation de la machine d'etats de charge.
+ */
+
 /* ──────────────────────────────────────────────────────────────
    Constructeur  (remplace generateur_save_init())
    En C++ l'initialisation des membres se fait dans la liste
@@ -23,6 +28,7 @@ extern MemoirePartagee mem; // Instance globale pour gérer la mémoire partagé
 extern Voyants v;      // Instance globale pour gérer les voyants
 Prise p;              // Instance globale pour gérer la prise
 
+/** @copydoc GestionnaireCharge::GestionnaireCharge */
 GestionnaireCharge::GestionnaireCharge()
     : etatPresent(EtatCharge::A)
     , etatSuivant(EtatCharge::A)
@@ -30,6 +36,7 @@ GestionnaireCharge::GestionnaireCharge()
     init();
 }
 
+/** @copydoc GestionnaireCharge::init */
 void GestionnaireCharge::init()
 {
     mem.init_memoire_partagee();
@@ -49,6 +56,7 @@ void GestionnaireCharge::init()
 /* ──────────────────────────────────────────────────────────────
    genererPwm  (snake_case → camelCase, convention C++)
    ────────────────────────────────────────────────────────────── */
+/** @copydoc GestionnaireCharge::genererPwm */
 void GestionnaireCharge::genererPwm(pwm mode)
 {
     if (io_shared == nullptr) {
@@ -62,6 +70,7 @@ void GestionnaireCharge::genererPwm(pwm mode)
    tension()  — qualificateur "const" : cette méthode ne modifie
    aucun membre de la classe, le compilateur peut le vérifier.
    ────────────────────────────────────────────────────────────── */
+/** @copydoc GestionnaireCharge::tension */
 int GestionnaireCharge::tension() const
 {
     if (io_shared == nullptr) return 0;
@@ -74,6 +83,7 @@ int GestionnaireCharge::tension() const
    membres de la classe, pas des variables statiques globales.
    On utilise EtatCharge::A au lieu de etatA.
    ────────────────────────────────────────────────────────────── */
+/** @copydoc GestionnaireCharge::charger */
 void GestionnaireCharge::charger()
 {
     if (io_shared == nullptr) init();
@@ -161,6 +171,7 @@ void GestionnaireCharge::charger()
     }
 }
 
+/** @copydoc GestionnaireCharge::ouvrirAC */
 void GestionnaireCharge::ouvrirAC()
 {
     if (io_shared == nullptr) init();
@@ -168,6 +179,7 @@ void GestionnaireCharge::ouvrirAC()
     io_shared->contacteur_AC = 0;
 }
 
+/** @copydoc GestionnaireCharge::fermerAC */
 void GestionnaireCharge::fermerAC()
 {
     if (io_shared == nullptr) init();
@@ -175,6 +187,7 @@ void GestionnaireCharge::fermerAC()
     io_shared->contacteur_AC = 1;
 }
 
+/** @copydoc GestionnaireCharge::deconnecter */
 void GestionnaireCharge::deconnecter()
 {
     if (io_shared == nullptr) init();

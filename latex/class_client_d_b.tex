@@ -1,0 +1,158 @@
+\doxysection{Référence de la classe Client\+DB}
+\hypertarget{class_client_d_b}{}\label{class_client_d_b}\index{ClientDB@{ClientDB}}
+
+
+Gere les cartes connues et la carte autorisee pour la deconnexion.  
+
+
+
+
+{\ttfamily \+\#include $<$client\+\_\+db.\+hpp$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_client_d_b_accb9fdcf2239b672366826333a337f59}{Client\+DB}} ()
+\begin{DoxyCompactList}\small\item\em Construit la base client et charge les cartes depuis le fichier. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_client_d_b_a6ae13a021f98828dae411d994d7bf3f1}{authentification\+\_\+carte}} (int numero, const std::\+string \&filename, int passage)
+\begin{DoxyCompactList}\small\item\em Verifie une carte lors du debut ou de la fin de charge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_client_d_b_a1f932a76472cd75f9133c0131716ea0f}{load\+\_\+cards\+\_\+from\+\_\+file}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Recharge toutes les cartes autorisees depuis un fichier texte. \end{DoxyCompactList}\item 
+static int \doxymbox{\hyperlink{class_client_d_b_abdcb49419fd497deaa28b5a67136d3fa}{count\+\_\+cards\+\_\+in\+\_\+file}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Compte le nombre de cartes presentes dans un fichier texte. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_client_d_b_afff982dc4635cdbe67e5937e7d2170a1}{reset\+\_\+carte\+\_\+active}} ()
+\begin{DoxyCompactList}\small\item\em Efface la carte active memorisee apres une deconnexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gere les cartes connues et la carte autorisee pour la deconnexion. 
+
+\label{doc-constructors}
+\Hypertarget{class_client_d_b_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_client_d_b_accb9fdcf2239b672366826333a337f59}\index{ClientDB@{ClientDB}!ClientDB@{ClientDB}}
+\index{ClientDB@{ClientDB}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{ClientDB()}{ClientDB()}}
+{\footnotesize\ttfamily \label{class_client_d_b_accb9fdcf2239b672366826333a337f59} 
+Client\+DB::\+\+Client\+DB (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construit la base client et charge les cartes depuis le fichier. 
+
+Charge la liste des cartes au demarrage. 
+
+\label{doc-func-members}
+\Hypertarget{class_client_d_b_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_client_d_b_a6ae13a021f98828dae411d994d7bf3f1}\index{ClientDB@{ClientDB}!authentification\_carte@{authentification\_carte}}
+\index{authentification\_carte@{authentification\_carte}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{authentification\_carte()}{authentification\_carte()}}
+{\footnotesize\ttfamily \label{class_client_d_b_a6ae13a021f98828dae411d994d7bf3f1} 
+bool Client\+DB::\+authentification\+\_\+carte (\begin{DoxyParamCaption}\item[{int}]{numero}{, }\item[{const std::\+string \&}]{filename}{, }\item[{int}]{passage}{}\end{DoxyParamCaption})}
+
+
+
+Verifie une carte lors du debut ou de la fin de charge. 
+
+Verifie une carte lors du debut ou de la fin de charge.   
+
+
+\begin{DoxyParams}{Paramètres}
+{\em numero} & Numero de la carte lue. \\
+\hline
+{\em filename} & Fichier de persistance des cartes autorisees. \\
+\hline
+{\em passage} & Type de verification:\+ debut de charge ou deconnexion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la carte est autorisee pour l\textquotesingle{}operation demandee.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Paramètres}
+{\em numero} & Numero de la carte lue. \\
+\hline
+{\em filename} & Fichier de persistance des cartes autorisees. \\
+\hline
+{\em passage} & Type de verification:\+ debut de charge ou deconnexion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la carte est autorisee pour l\textquotesingle{}operation demandee.
+\end{DoxyReturn}
+\Hypertarget{class_client_d_b_abdcb49419fd497deaa28b5a67136d3fa}\index{ClientDB@{ClientDB}!count\_cards\_in\_file@{count\_cards\_in\_file}}
+\index{count\_cards\_in\_file@{count\_cards\_in\_file}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{count\_cards\_in\_file()}{count\_cards\_in\_file()}}
+{\footnotesize\ttfamily \label{class_client_d_b_abdcb49419fd497deaa28b5a67136d3fa} 
+int Client\+DB::\+count\+\_\+cards\+\_\+in\+\_\+file (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name\+\_\+file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compte le nombre de cartes presentes dans un fichier texte. 
+
+Compte le nombre de cartes presentes dans un fichier texte.   
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & Nom du fichier a analyser. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Nombre de lignes non vides detectees.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & Nom du fichier a analyser. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Nombre de lignes non vides detectees.
+\end{DoxyReturn}
+\Hypertarget{class_client_d_b_a1f932a76472cd75f9133c0131716ea0f}\index{ClientDB@{ClientDB}!load\_cards\_from\_file@{load\_cards\_from\_file}}
+\index{load\_cards\_from\_file@{load\_cards\_from\_file}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{load\_cards\_from\_file()}{load\_cards\_from\_file()}}
+{\footnotesize\ttfamily \label{class_client_d_b_a1f932a76472cd75f9133c0131716ea0f} 
+void Client\+DB::\+load\+\_\+cards\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name\+\_\+file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Recharge toutes les cartes autorisees depuis un fichier texte. 
+
+Recharge toutes les cartes autorisees depuis un fichier texte.   
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & Nom du fichier contenant une carte par ligne.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & Nom du fichier contenant une carte par ligne.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_client_d_b_afff982dc4635cdbe67e5937e7d2170a1}\index{ClientDB@{ClientDB}!reset\_carte\_active@{reset\_carte\_active}}
+\index{reset\_carte\_active@{reset\_carte\_active}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{reset\_carte\_active()}{reset\_carte\_active()}}
+{\footnotesize\ttfamily \label{class_client_d_b_afff982dc4635cdbe67e5937e7d2170a1} 
+void Client\+DB::\+reset\+\_\+carte\+\_\+active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Efface la carte active memorisee apres une deconnexion. 
+
+Efface la carte active memorisee apres une deconnexion.   
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{client__db_8hpp}{client\+\_\+db.\+hpp}}\item 
+src/\+\doxymbox{\hyperlink{client__db_8cpp}{client\+\_\+db.\+cpp}}\end{DoxyCompactItemize}

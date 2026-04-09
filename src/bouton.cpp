@@ -2,12 +2,19 @@
 #include "bouton.hpp"
 #include "memoire_partagee.hpp"
 
+/**
+ * @file bouton.cpp
+ * @brief Implementation de l'acces aux boutons materiels.
+ */
 
+
+/** @copydoc bouton::bouton */
 bouton::bouton(/* args */)
 {
     
 }
 
+/** @copydoc bouton::bouton_init */
 void bouton::bouton_init(void)
 {
     /* Initialisation des boutons (optionnelle) */
@@ -17,6 +24,7 @@ void bouton::bouton_init(void)
     }
 }
 
+/** @copydoc bouton::bouton_charge_lit */
 int bouton::bouton_charge_lit(void)
 {
     if (io_shared == NULL) {
@@ -26,6 +34,7 @@ int bouton::bouton_charge_lit(void)
     return io_shared->bouton_charge;
 }
 
+/** @copydoc bouton::bouton_stop_lit */
 int bouton::bouton_stop_lit(void)
 {
     if (io_shared == NULL) {
@@ -35,6 +44,7 @@ int bouton::bouton_stop_lit(void)
     return io_shared->bouton_stop;
 }
 
+/** @copydoc bouton::bouton_charge_reset */
 void bouton::bouton_charge_reset(void)
 {
     if (io_shared == NULL) {
@@ -44,6 +54,7 @@ void bouton::bouton_charge_reset(void)
     io_shared->bouton_charge = 0;
 }
 
+/** @copydoc bouton::bouton_stop_reset */
 void bouton::bouton_stop_reset(void)
 {
     if (io_shared == NULL) {

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project C++: Référence du fichier src/fin_charge.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project C++
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('fin__charge_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier fin_charge.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Verification finale de la carte et sequence de deconnexion.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="client__db_8hpp_source.html">client_db.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="memoire__partagee_8hpp_source.html">memoire_partagee.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generateur__save_8hpp_source.html">generateur_save.hpp</a>&quot;</code><br />
+<code>#include &lt;lcarte.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lecteurcarte_8hpp_source.html">lecteurcarte.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="prise_8hpp_source.html">prise.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="voyants_8hpp_source.html">voyants.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fin__charge_8hpp_source.html">fin_charge.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2d8e68ac210c561cacfcce63903057ce" id="r_a2d8e68ac210c561cacfcce63903057ce"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a2d8e68ac210c561cacfcce63903057ce">check_and_deconnect</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afc569e845b57f0473570d1a59ea63f15" id="r_afc569e845b57f0473570d1a59ea63f15"><td class="memItemLeft"><a id="afc569e845b57f0473570d1a59ea63f15" name="afc569e845b57f0473570d1a59ea63f15"></a>
+<a class="el" href="class_client_d_b.html">ClientDB</a>&#160;</td><td class="memItemRight"><b>db</b></td></tr>
+<tr class="memitem:ac3d50ef1f06aa5baec0fa1e501e108d6" id="r_ac3d50ef1f06aa5baec0fa1e501e108d6"><td class="memItemLeft"><a id="ac3d50ef1f06aa5baec0fa1e501e108d6" name="ac3d50ef1f06aa5baec0fa1e501e108d6"></a>
+<a class="el" href="class_gestionnaire_charge.html">GestionnaireCharge</a>&#160;</td><td class="memItemRight"><b>gen_charge</b></td></tr>
+<tr class="memitem:aa31e8f8a474bb8c88190f4adf1c265a6" id="r_aa31e8f8a474bb8c88190f4adf1c265a6"><td class="memItemLeft"><a id="aa31e8f8a474bb8c88190f4adf1c265a6" name="aa31e8f8a474bb8c88190f4adf1c265a6"></a>
+<a class="el" href="class_voyants.html">Voyants</a>&#160;</td><td class="memItemRight"><b>v</b></td></tr>
+<tr class="memitem:a5e12e40e1588b9f59db172d770646c55" id="r_a5e12e40e1588b9f59db172d770646c55"><td class="memItemLeft"><a id="a5e12e40e1588b9f59db172d770646c55" name="a5e12e40e1588b9f59db172d770646c55"></a>
+<a class="el" href="classbouton.html">bouton</a>&#160;</td><td class="memItemRight"><b>b</b></td></tr>
+<tr class="memitem:a2ca5523e6c09a344e9a4a0fb55c20f7f" id="r_a2ca5523e6c09a344e9a4a0fb55c20f7f"><td class="memItemLeft"><a id="a2ca5523e6c09a344e9a4a0fb55c20f7f" name="a2ca5523e6c09a344e9a4a0fb55c20f7f"></a>
+<a class="el" href="class_prise.html">Prise</a>&#160;</td><td class="memItemRight"><b>p</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Verification finale de la carte et sequence de deconnexion. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a2d8e68ac210c561cacfcce63903057ce" name="a2d8e68ac210c561cacfcce63903057ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8e68ac210c561cacfcce63903057ce">&#9670;&#160;</a></span>check_and_deconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_and_deconnect </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p></p>
+<p>Controle la carte presentee pour terminer une charge en cours.</p>
+<p>Controle la carte presentee pour terminer une charge en cours.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="fin__charge_8cpp.html">fin_charge.cpp</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

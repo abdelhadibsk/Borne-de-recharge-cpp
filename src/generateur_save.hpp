@@ -7,6 +7,11 @@
 #include "voyants.hpp"
 #include "prise.hpp"
 
+/**
+ * @file generateur_save.hpp
+ * @brief Machine d'etats pilotant la sequence de charge du vehicule.
+ */
+
 /*
  * Module de gestion du chargeur de véhicule électrique
  * Implémente une machine d'états pour la séquence de charge complète.
@@ -19,27 +24,47 @@
  *  - Les méthodes const garantissent qu'elles ne modifient pas l'état.
  */
 
+/**
+ * @class GestionnaireCharge
+ * @brief Pilote la sequence complete de charge et de deconnexion.
+ */
 class GestionnaireCharge {
 public:
-    /* Constructeur : initialise la mémoire partagée et remet l'état à A */
+    /**
+     * @brief Construit le gestionnaire et initialise la machine d'etats.
+     */
     GestionnaireCharge();
 
-    /* Démarre la séquence de charge automatique (boucle bloquante) */
+    /**
+     * @brief Lance la sequence de charge complete.
+     */
     void charger();
 
-    /* Règle le mode PWM (STOP, DC, AC_1K, AC_CL) */
+    /**
+     * @brief Modifie le signal PWM envoye au vehicule.
+     * @param mode Mode PWM a appliquer.
+     */
     void genererPwm(pwm mode);
 
-    /* Retourne la tension mesurée (gene_u) */
+    /**
+     * @brief Retourne la tension actuellement lue sur la borne.
+     * @return Valeur de tension issue de la memoire partagee.
+     */
     int tension() const;
 
-    /* Ouvre le contact AC (coupe l'alimentation) */
+    /**
+     * @brief Ouvre le contacteur AC pour couper l'alimentation.
+     */
     void ouvrirAC();
 
-    /* Ferme le contact AC (active l'alimentation) */
+    /**
+     * @brief Ferme le contacteur AC pour alimenter la prise.
+     */
     void fermerAC();
 
-    /* Déconnecte le chargeur et réinitialise l'état */
+    /**
+     * @brief Reinitialise la borne apres la deconnexion du vehicule.
+     */
     void deconnecter();
 
 private:
@@ -50,7 +75,9 @@ private:
     EtatCharge etatPresent;
     EtatCharge etatSuivant;
 
-    /* Initialisation interne (appelée par le constructeur) */
+    /**
+     * @brief Initialise l'etat interne et les sorties partagees.
+     */
     void init();
 };
 

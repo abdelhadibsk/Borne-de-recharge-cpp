@@ -1,0 +1,56 @@
+\doxysection{generateur\+\_\+save.\+hpp}
+\hypertarget{generateur__save_8hpp_source}{}\label{generateur__save_8hpp_source}\index{src/generateur\_save.hpp@{src/generateur\_save.hpp}}
+\doxymbox{\hyperlink{generateur__save_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GENERATEUR\_SAVE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GENERATEUR\_SAVE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <donnees\_borne.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memoire\_borne.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{voyants_8hpp}{voyants.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{prise_8hpp}{prise.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ Module\ de\ gestion\ du\ chargeur\ de\ véhicule\ électrique}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ Implémente\ une\ machine\ d'états\ pour\ la\ séquence\ de\ charge\ complète.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ Changements\ C\ →\ C++\ :}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ \ -\/\ La\ variable\ globale\ etat\_present\ et\ les\ fonctions\ libres\ deviennent}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ \ \ \ membres\ privés/publics\ d'une\ classe.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ \ -\/\ L'enum\ non\ scopé\ devient\ un\ enum\ class\ (évite\ les\ collisions\ de\ noms).}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ \ -\/\ Le\ constructeur\ remplace\ generateur\_save\_init().}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ \ -\/\ Les\ méthodes\ const\ garantissent\ qu'elles\ ne\ modifient\ pas\ l'état.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gestionnaire_charge_acd6f2a06509100c0852b1c138fbbbf47}{GestionnaireCharge}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_gestionnaire_charge_acd6f2a06509100c0852b1c138fbbbf47}{GestionnaireCharge}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gestionnaire_charge_ad8e799a141ce92c554aebe8c4d2845a5}{charger}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gestionnaire_charge_a95da04e7cee7bd129a96cd04925c117a}{genererPwm}}(pwm\ mode);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gestionnaire_charge_a6d3eeb1a5cd931eb5b47a0cb4e54b5a9}{tension}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gestionnaire_charge_a40ef444e1e4f9a8e2fa2cdd0765be1b9}{ouvrirAC}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gestionnaire_charge_a827912c2b0dadf5a6b7937fac9d71392}{fermerAC}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gestionnaire_charge_a98a34908a7bedd09cf4a00d0005e79b3}{deconnecter}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*\ Enum\ class\ scopé\ :\ EtatCharge::A,\ EtatCharge::B,\ etc.}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ *\ En\ C\ on\ écrivait\ "{}etatA"{},\ ce\ qui\ polluait\ le\ namespace\ global.\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{enum\ class}\ EtatCharge\ \{\ A,\ B,\ C,\ D,\ E\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ EtatCharge\ etatPresent;}
+\DoxyCodeLine{00076\ \ \ \ \ EtatCharge\ etatSuivant;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ GESTIONNAIRE\_CHARGE\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -14,10 +14,30 @@
 #include "bouton.hpp"
 #include "generateur_save.hpp"
 
+/**
+ * @file lecteurcarte.hpp
+ * @brief Interface du lecteur de carte de la borne.
+ */
+
+/**
+ * @class LecteurCarte
+ * @brief Orchestre l'authentification et le lancement d'une charge.
+ */
 class LecteurCarte {
     public:
-        LecteurCarte(); // Constructeur
+    /**
+     * @brief Construit le lecteur et prepare les dependances partagees.
+     */
+        LecteurCarte();
+
+    /**
+     * @brief Initialise l'acces a la memoire partagee et aux boutons.
+     */
     void lecteurcarte_initialiser();
+
+    /**
+     * @brief Lit une carte, verifie l'acces et declenche la charge si possible.
+     */
     void lecteurcarte_lire_carte();
 
     private:

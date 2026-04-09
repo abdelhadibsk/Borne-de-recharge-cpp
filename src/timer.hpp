@@ -3,21 +3,34 @@
 
 #include <chrono>
 
+/**
+ * @file timer.hpp
+ * @brief Chronometre simple base sur std::chrono.
+ */
+
+/**
+ * @class Timer
+ * @brief Fournit un compteur de temps ecoule en secondes.
+ */
 class Timer {
 public:
+    /**
+     * @brief Construit un timer et memorise l'instant de reference.
+     */
     Timer();
 
-    void timer_raz();        // équivalent timer_raz
-    uint32_t timer_valeur();    // équivalent timer_valeur (en secondes)
+    /**
+     * @brief Reinitialise le point de depart du timer.
+     */
+    void timer_raz();
+
+    /**
+     * @brief Retourne le temps ecoule depuis la derniere remise a zero.
+     * @return Nombre de secondes ecoulees.
+     */
+    uint32_t timer_valeur();
 
 private:
     std::chrono::steady_clock::time_point ref;
 };
-/*utilisation :
-Timer t; // crée un timer et l'initialise
-t.timer_raz(); // réinitialise le timer
-uint32_t elapsed = t.timer_valeur(); // récupère le nombre de secondes écoulées depuis la dernière réinitialisation
-*/
-
-
 #endif

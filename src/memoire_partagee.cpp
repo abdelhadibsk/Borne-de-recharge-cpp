@@ -5,11 +5,16 @@ extern "C" {
 }
 #include "memoire_partagee.hpp" 
 
+/**
+ * @file memoire_partagee.cpp
+ * @brief Implementation de l'acces a la memoire partagee.
+ */
+
 /* Définition de la variable globale unique */
 entrees *io_shared = NULL;
 int shmid_shared;;  
 
-/* Fonction pour initialiser l'accès à la mémoire partagée */
+/** @copydoc MemoirePartagee::init_memoire_partagee */
 void MemoirePartagee::init_memoire_partagee(void)
 {
     if (io_shared == NULL) {

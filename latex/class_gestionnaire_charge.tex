@@ -1,0 +1,141 @@
+\doxysection{Référence de la classe Gestionnaire\+Charge}
+\hypertarget{class_gestionnaire_charge}{}\label{class_gestionnaire_charge}\index{GestionnaireCharge@{GestionnaireCharge}}
+
+
+Pilote la sequence complete de charge et de deconnexion.  
+
+
+
+
+{\ttfamily \+\#include $<$generateur\+\_\+save.\+hpp$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gestionnaire_charge_acd6f2a06509100c0852b1c138fbbbf47}{Gestionnaire\+Charge}} ()
+\begin{DoxyCompactList}\small\item\em Construit le gestionnaire et initialise la machine d\textquotesingle{}etats. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_gestionnaire_charge_ad8e799a141ce92c554aebe8c4d2845a5}{charger}} ()
+\begin{DoxyCompactList}\small\item\em Lance la sequence de charge complete. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_gestionnaire_charge_a95da04e7cee7bd129a96cd04925c117a}{generer\+Pwm}} (pwm mode)
+\begin{DoxyCompactList}\small\item\em Modifie le signal PWM envoye au vehicule. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_gestionnaire_charge_a6d3eeb1a5cd931eb5b47a0cb4e54b5a9}{tension}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la tension actuellement lue sur la borne. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_gestionnaire_charge_a40ef444e1e4f9a8e2fa2cdd0765be1b9}{ouvrir\+AC}} ()
+\begin{DoxyCompactList}\small\item\em Ouvre le contacteur AC pour couper l\textquotesingle{}alimentation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_gestionnaire_charge_a827912c2b0dadf5a6b7937fac9d71392}{fermer\+AC}} ()
+\begin{DoxyCompactList}\small\item\em Ferme le contacteur AC pour alimenter la prise. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_gestionnaire_charge_a98a34908a7bedd09cf4a00d0005e79b3}{deconnecter}} ()
+\begin{DoxyCompactList}\small\item\em Reinitialise la borne apres la deconnexion du vehicule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Pilote la sequence complete de charge et de deconnexion. 
+
+\label{doc-constructors}
+\Hypertarget{class_gestionnaire_charge_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_gestionnaire_charge_acd6f2a06509100c0852b1c138fbbbf47}\index{GestionnaireCharge@{GestionnaireCharge}!GestionnaireCharge@{GestionnaireCharge}}
+\index{GestionnaireCharge@{GestionnaireCharge}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{GestionnaireCharge()}{GestionnaireCharge()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_acd6f2a06509100c0852b1c138fbbbf47} 
+Gestionnaire\+Charge::\+\+Gestionnaire\+Charge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construit le gestionnaire et initialise la machine d\textquotesingle{}etats. 
+
+Construit le gestionnaire et initialise la machine d\textquotesingle{}etats.   
+
+\label{doc-func-members}
+\Hypertarget{class_gestionnaire_charge_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_gestionnaire_charge_ad8e799a141ce92c554aebe8c4d2845a5}\index{GestionnaireCharge@{GestionnaireCharge}!charger@{charger}}
+\index{charger@{charger}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{charger()}{charger()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_ad8e799a141ce92c554aebe8c4d2845a5} 
+void Gestionnaire\+Charge::\+charger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lance la sequence de charge complete. 
+
+Lance la sequence de charge complete.   \Hypertarget{class_gestionnaire_charge_a98a34908a7bedd09cf4a00d0005e79b3}\index{GestionnaireCharge@{GestionnaireCharge}!deconnecter@{deconnecter}}
+\index{deconnecter@{deconnecter}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{deconnecter()}{deconnecter()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_a98a34908a7bedd09cf4a00d0005e79b3} 
+void Gestionnaire\+Charge::\+deconnecter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reinitialise la borne apres la deconnexion du vehicule. 
+
+Reinitialise la borne apres la deconnexion du vehicule.   \Hypertarget{class_gestionnaire_charge_a827912c2b0dadf5a6b7937fac9d71392}\index{GestionnaireCharge@{GestionnaireCharge}!fermerAC@{fermerAC}}
+\index{fermerAC@{fermerAC}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{fermerAC()}{fermerAC()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_a827912c2b0dadf5a6b7937fac9d71392} 
+void Gestionnaire\+Charge::\+fermer\+AC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ferme le contacteur AC pour alimenter la prise. 
+
+Ferme le contacteur AC pour alimenter la prise.   \Hypertarget{class_gestionnaire_charge_a95da04e7cee7bd129a96cd04925c117a}\index{GestionnaireCharge@{GestionnaireCharge}!genererPwm@{genererPwm}}
+\index{genererPwm@{genererPwm}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{genererPwm()}{genererPwm()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_a95da04e7cee7bd129a96cd04925c117a} 
+void Gestionnaire\+Charge::\+generer\+Pwm (\begin{DoxyParamCaption}\item[{pwm}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Modifie le signal PWM envoye au vehicule. 
+
+Modifie le signal PWM envoye au vehicule.   
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mode} & Mode PWM a appliquer.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mode} & Mode PWM a appliquer.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_gestionnaire_charge_a40ef444e1e4f9a8e2fa2cdd0765be1b9}\index{GestionnaireCharge@{GestionnaireCharge}!ouvrirAC@{ouvrirAC}}
+\index{ouvrirAC@{ouvrirAC}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{ouvrirAC()}{ouvrirAC()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_a40ef444e1e4f9a8e2fa2cdd0765be1b9} 
+void Gestionnaire\+Charge::\+ouvrir\+AC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ouvre le contacteur AC pour couper l\textquotesingle{}alimentation. 
+
+Ouvre le contacteur AC pour couper l\textquotesingle{}alimentation.   \Hypertarget{class_gestionnaire_charge_a6d3eeb1a5cd931eb5b47a0cb4e54b5a9}\index{GestionnaireCharge@{GestionnaireCharge}!tension@{tension}}
+\index{tension@{tension}!GestionnaireCharge@{GestionnaireCharge}}
+\doxysubsubsection{\texorpdfstring{tension()}{tension()}}
+{\footnotesize\ttfamily \label{class_gestionnaire_charge_a6d3eeb1a5cd931eb5b47a0cb4e54b5a9} 
+int Gestionnaire\+Charge::\+tension (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne la tension actuellement lue sur la borne. 
+
+Retourne la tension actuellement lue sur la borne.   
+
+\begin{DoxyReturn}{Renvoie}
+Valeur de tension issue de la memoire partagee.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Renvoie}
+Valeur de tension issue de la memoire partagee.
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{generateur__save_8hpp}{generateur\+\_\+save.\+hpp}}\item 
+src/\+\doxymbox{\hyperlink{generateur__save_8cpp}{generateur\+\_\+save.\+cpp}}\end{DoxyCompactItemize}

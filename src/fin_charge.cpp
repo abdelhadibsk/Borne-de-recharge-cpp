@@ -10,6 +10,11 @@ extern "C" {
 #include "voyants.hpp"
 #include "fin_charge.hpp"
 
+/**
+ * @file fin_charge.cpp
+ * @brief Verification finale de la carte et sequence de deconnexion.
+ */
+
 extern ClientDB db;                      /* Accès à la base de données clients */
 extern    GestionnaireCharge gen_charge;   /* Instance du gestionnaire de charge */
 extern    Voyants v;                    /* Instance de gestion des voyants */
@@ -17,7 +22,7 @@ extern    bouton b;                        /* Instance de gestion des boutons */
 extern    Prise p;                      /* Instance de gestion de la prise */
 
 
-//si le bouton stop est appuye ou si la fin de charge est atteinte cette fonction est appelee
+/** @copydoc check_and_deconnect */
 int check_and_deconnect(void) {
 
 
@@ -29,7 +34,7 @@ int check_and_deconnect(void) {
     int numero = lecture_numero_carte();  /**************/
     //int numero = 14;   
 
-    if (db.authentification_carte(numero, "users.txt", 2, NULL))
+    if (db.authentification_carte(numero, "users.txt", 2))
     {   std::cout << "Acces autorise pour la carte n " << numero << std::endl;
                         
         p.deverouiller_trappe();              /* Trappe déverrouillée */
@@ -47,6 +52,7 @@ int check_and_deconnect(void) {
         attente_retrait_carte();
         liberation_ports();
         gen_charge.deconnecter();
+        db.reset_carte_active();
         
         return 1;           /* Sortie de la boucle */
     }            

@@ -1,0 +1,45 @@
+\doxysection{Référence du fichier src/\+lecteurcarte.cpp}
+\hypertarget{lecteurcarte_8cpp}{}\label{lecteurcarte_8cpp}\index{src/lecteurcarte.cpp@{src/lecteurcarte.cpp}}
+
+
+Implementation du cycle de lecture carte et declenchement de charge.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$lcarte.\+h$>$}\newline
+{\ttfamily \+\#include $<$donnees\+\_\+borne.\+h$>$}\newline
+{\ttfamily \+\#include $<$memoire\+\_\+borne.\+h$>$}\newline
+{\ttfamily \+\#include "{}lecteurcarte.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}timer.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}voyants.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}memoire\+\_\+partagee.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}client\+\_\+db.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}bouton.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}generateur\+\_\+save.\+hpp"{}}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{lecteurcarte_8cpp_a92f0ffd0cf22c1da2f14d8be1c703edd}\label{lecteurcarte_8cpp_a92f0ffd0cf22c1da2f14d8be1c703edd} 
+\doxymbox{\hyperlink{class_memoire_partagee}{Memoire\+Partagee}} {\bfseries mem}
+\item 
+\Hypertarget{lecteurcarte_8cpp_a978d88b393c8a37dc2614c88788b3442}\label{lecteurcarte_8cpp_a978d88b393c8a37dc2614c88788b3442} 
+\doxymbox{\hyperlink{class_timer}{Timer}} {\bfseries t}
+\item 
+\Hypertarget{lecteurcarte_8cpp_aa31e8f8a474bb8c88190f4adf1c265a6}\label{lecteurcarte_8cpp_aa31e8f8a474bb8c88190f4adf1c265a6} 
+\doxymbox{\hyperlink{class_voyants}{Voyants}} {\bfseries v}
+\item 
+\Hypertarget{lecteurcarte_8cpp_a5e12e40e1588b9f59db172d770646c55}\label{lecteurcarte_8cpp_a5e12e40e1588b9f59db172d770646c55} 
+\doxymbox{\hyperlink{classbouton}{bouton}} {\bfseries b}
+\item 
+\Hypertarget{lecteurcarte_8cpp_afc569e845b57f0473570d1a59ea63f15}\label{lecteurcarte_8cpp_afc569e845b57f0473570d1a59ea63f15} 
+\doxymbox{\hyperlink{class_client_d_b}{Client\+DB}} {\bfseries db}
+\item 
+\Hypertarget{lecteurcarte_8cpp_ac3d50ef1f06aa5baec0fa1e501e108d6}\label{lecteurcarte_8cpp_ac3d50ef1f06aa5baec0fa1e501e108d6} 
+\doxymbox{\hyperlink{class_gestionnaire_charge}{Gestionnaire\+Charge}} {\bfseries gen\+\_\+charge}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du cycle de lecture carte et declenchement de charge. 
+

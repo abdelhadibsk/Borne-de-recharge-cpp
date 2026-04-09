@@ -14,6 +14,11 @@ extern "C" {
 #include "bouton.hpp"
 #include "generateur_save.hpp"
 
+/**
+ * @file lecteurcarte.cpp
+ * @brief Implementation du cycle de lecture carte et declenchement de charge.
+ */
+
 //ipcclean
 
 MemoirePartagee mem; // Instance globale pour gérer la mémoire partagée
@@ -23,9 +28,7 @@ bouton b;      // Instance globale pour gérer les boutons
 ClientDB db;   // Instance globale pour gérer la base de données des clients
 GestionnaireCharge gen_charge;   // Instance globale pour gérer la charge
 
-int num_check = 0; 
-
-//constructeur
+/** @copydoc LecteurCarte::LecteurCarte */
 LecteurCarte::LecteurCarte() {
     mem.init_memoire_partagee();
     b.bouton_init();
@@ -36,6 +39,7 @@ LecteurCarte::LecteurCarte() {
     }
 }
 
+/** @copydoc LecteurCarte::lecteurcarte_initialiser */
 void LecteurCarte::lecteurcarte_initialiser()
 {
     mem.init_memoire_partagee();
@@ -45,6 +49,7 @@ void LecteurCarte::lecteurcarte_initialiser()
     }
 }
 
+/** @copydoc LecteurCarte::lecteurcarte_lire_carte */
 void LecteurCarte::lecteurcarte_lire_carte()
 {  
     /* Vérification de l'initialisation de la mémoire partagée*/
@@ -64,15 +69,13 @@ void LecteurCarte::lecteurcarte_lire_carte()
     t.timer_raz ();   // remise à zéro et lancement du timer
 
     numero = lecture_numero_carte();
-    num_check = numero;
-
     //numero = 14;    // Valeur de test
 
     std::cout << "Numéro de carte lue  : " << numero << std::endl;
     std::cout << "Vérification de l'accès pour la carte n° " << numero << "..." << std::endl;
    
     // ajouter une classe client_db pour gérer la base de données des clients et une méthode d'authentification qui prend en paramètre le numéro de carte et retourne un booléen
-    if (db.authentification_carte(numero, "users.txt", 1, num_check))
+    if (db.authentification_carte(numero, "users.txt", 1))
     {
         std::cout << "Accès autorisé pour la carte n° " << numero << std::endl;
         std::cout << "Appuyez sur le boutton charge\n" << std::endl;
