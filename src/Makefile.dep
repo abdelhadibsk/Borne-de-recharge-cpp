@@ -1,0 +1,44 @@
+accesMemoire.o: accesMemoire.cpp /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h
+borne.o: borne.cpp /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h lecteurcarte.hpp \
+ /shared/TCii/include/lcarte.h timer.hpp voyants.hpp memoire_partagee.hpp \
+ client_db.hpp bouton.hpp generateur_save.hpp prise.hpp
+bouton.o: bouton.cpp bouton.hpp memoire_partagee.hpp \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h
+client_db.o: client_db.cpp client_db.hpp
+fin_charge.o: fin_charge.cpp client_db.hpp memoire_partagee.hpp \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h generateur_save.hpp voyants.hpp \
+ prise.hpp /shared/TCii/include/lcarte.h lecteurcarte.hpp timer.hpp \
+ bouton.hpp fin_charge.hpp
+generateur_save.o: generateur_save.cpp \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h generateur_save.hpp voyants.hpp \
+ prise.hpp memoire_partagee.hpp lecteurcarte.hpp \
+ /shared/TCii/include/lcarte.h timer.hpp client_db.hpp bouton.hpp \
+ fin_charge.hpp
+lecteurcarte.o: lecteurcarte.cpp /shared/TCii/include/lcarte.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h lecteurcarte.hpp timer.hpp \
+ voyants.hpp memoire_partagee.hpp client_db.hpp bouton.hpp \
+ generateur_save.hpp prise.hpp
+memoire_partagee.o: memoire_partagee.cpp \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h memoire_partagee.hpp
+prise.o: prise.cpp prise.hpp memoire_partagee.hpp \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h
+timer.o: timer.cpp timer.hpp
+voyants.o: voyants.cpp /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h memoire_partagee.hpp voyants.hpp
